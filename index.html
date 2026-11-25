@@ -1,0 +1,1680 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>色91_成人视频平台_高清视频资源</title>
+  <meta name="description" content="色91是一个成人视频平台，提供高清视频资源、分类筛选与每日更新。适合寻找特定类型视频的成年观众浏览最新条目、查看榜单和参与社区讨论。">
+  <meta name="keywords" content="高清视频资源,成人视频平台,视频分类筛选,每日更新视频,社区讨论">
+  <style>
+    /* ---------- 设计系统变量 ---------- */
+    :root {
+      --brand-primary: #b22234;     /* 深红，品牌主色 */
+      --brand-secondary: #2c3e50;   /* 深蓝灰，辅助 */
+      --brand-accent: #ff6b6b;      /* 强调红 */
+      --bg-body: #f9f6f2;
+      --bg-card: #ffffff;
+      --bg-dark: #1e1e2f;
+      --text-primary: #1e1e2f;
+      --text-secondary: #4a4a5a;
+      --text-light: #f0f0f0;
+      --border-color: #e0dcd5;
+      --shadow-sm: 0 2px 6px rgba(0,0,0,0.04);
+      --shadow-md: 0 6px 16px rgba(0,0,0,0.08);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --font-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      --header-height: 64px;
+      --announce-height: 40px;
+      --sticky-offset: calc(var(--announce-height) + var(--header-height));
+      --max-width: 1360px;
+    }
+
+    /* ---------- 重置与基础 ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-base);
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ---------- 吸顶公告条 + 页头 ---------- */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-height);
+      background: var(--brand-primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      height: var(--header-height);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--brand-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+      letter-spacing: 0.5px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .main-nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover {
+      color: var(--brand-primary);
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-body);
+      border-radius: 40px;
+      padding: 0.3rem 0.3rem 0.3rem 1rem;
+      border: 1px solid var(--border-color);
+      transition: border-color 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--brand-primary);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      padding: 0.4rem 0;
+      font-size: 0.9rem;
+      width: 180px;
+      outline: none;
+      color: var(--text-primary);
+    }
+
+    .search-box input::placeholder {
+      color: #aaa;
+    }
+
+    .search-box button {
+      background: var(--brand-primary);
+      color: white;
+      border-radius: 40px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .search-box button:hover {
+      background: var(--brand-accent);
+    }
+
+    /* ---------- 页面容器 ---------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* ---------- 三栏门户布局 ---------- */
+    .portal-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* ---------- 首屏主题区 ---------- */
+    .hero-section {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      border: 1px solid rgba(178, 34, 52, 0.15);
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--brand-primary);
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-accent);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid var(--brand-primary);
+      color: var(--brand-primary);
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--brand-primary);
+      color: white;
+    }
+
+    .hero-visual {
+      flex-shrink: 0;
+      width: 260px;
+      height: 200px;
+      position: relative;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ---------- 左频道索引 ---------- */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      padding-top: 0.5rem;
+    }
+
+    .channel-sidebar h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--brand-primary);
+    }
+
+    .channel-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .channel-list a {
+      display: block;
+      padding: 0.55rem 0.8rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .channel-list a:hover {
+      background: #f0e8e5;
+      color: var(--brand-primary);
+      font-weight: 500;
+    }
+
+    /* ---------- 主内容区 ---------- */
+    .main-content {
+      min-width: 0;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .section-header .more-link {
+      font-size: 0.9rem;
+      color: var(--brand-primary);
+      font-weight: 500;
+    }
+
+    /* 概览段落 */
+    .overview-text {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .overview-text strong {
+      color: var(--brand-primary);
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .video-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-img {
+      aspect-ratio: 4/3;
+      width: 100%;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .card-body {
+      padding: 0.9rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag {
+      background: #f0e8e5;
+      color: var(--brand-primary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 0.6rem;
+      flex: 1;
+    }
+
+    .card-meta {
+      font-size: 0.75rem;
+      color: #999;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 0.5rem;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .update-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 0.8rem 1.2rem;
+      border: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+
+    .update-item .update-title {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .update-item .update-desc {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .update-item .update-time {
+      font-size: 0.8rem;
+      color: #999;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.8rem;
+    }
+
+    .category-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 0.9rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .category-item:hover {
+      background: var(--brand-primary);
+      color: white;
+      border-color: var(--brand-primary);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .deep-dive h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 1.5rem 0 0.75rem;
+      color: var(--brand-primary);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 0.8rem;
+    }
+
+    .deep-dive ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .deep-dive li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 0.3rem;
+      list-style: disc;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 1rem 1.2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.3rem;
+      color: var(--brand-primary);
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item p {
+      padding: 0 1.2rem 1.2rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* 用户评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .comment-item {
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 0.9rem 1.2rem;
+      border: 1px solid var(--border-color);
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+    }
+
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .comment-body {
+      flex: 1;
+    }
+
+    .comment-author {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .comment-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .comment-date {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-top: 0.3rem;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 1rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      border: 1px solid var(--border-color);
+      align-items: center;
+    }
+
+    .news-img {
+      width: 100px;
+      height: 70px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .news-content {
+      flex: 1;
+    }
+
+    .news-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: #999;
+      margin-bottom: 0.2rem;
+    }
+
+    .news-summary {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* 相关推荐 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tag-cloud a {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 40px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--brand-primary);
+      color: white;
+      border-color: var(--brand-primary);
+    }
+
+    /* 右侧辅助栏 */
+    .aux-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .aux-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      padding: 1.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .aux-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--brand-primary);
+      color: var(--text-primary);
+    }
+
+    .rank-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .rank-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #f0e8e5;
+      color: var(--brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .rank-item:nth-child(1) .rank-num {
+      background: var(--brand-primary);
+      color: white;
+    }
+
+    .rank-item:nth-child(2) .rank-num {
+      background: var(--brand-accent);
+      color: white;
+    }
+
+    .rank-item:nth-child(3) .rank-num {
+      background: #ffb347;
+      color: white;
+    }
+
+    .rank-title {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .rank-meta {
+      font-size: 0.75rem;
+      color: #999;
+      margin-left: auto;
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .timeline-date {
+      font-weight: 600;
+      color: var(--brand-primary);
+      white-space: nowrap;
+      min-width: 60px;
+    }
+
+    .timeline-text {
+      color: var(--text-secondary);
+    }
+
+    /* ---------- 页尾 ---------- */
+    .footer {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 3rem 2rem 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-desc {
+      color: #aaa;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .footer h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .footer ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer ul a {
+      color: #aaa;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer ul a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      color: #777;
+      font-size: 0.8rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1024px) {
+      .portal-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-section {
+        grid-column: 1 / -1;
+      }
+      .channel-sidebar {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        grid-column: 1 / -1;
+      }
+      .channel-sidebar h2 {
+        width: 100%;
+        border-bottom: none;
+        margin-bottom: 0.5rem;
+      }
+      .channel-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .channel-list a {
+        padding: 0.4rem 0.9rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 40px;
+      }
+      .aux-sidebar {
+        position: static;
+        grid-column: 1 / -1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .aux-card {
+        flex: 1 1 260px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .container {
+        padding: 1rem;
+      }
+      .portal-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-section {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: center;
+      }
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-visual {
+        width: 100%;
+        height: 160px;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .main-nav {
+        display: none;
+      }
+      .header-inner {
+        padding: 0 1rem;
+      }
+      .search-box input {
+        width: 120px;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .update-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+      }
+      .update-item .update-time {
+        margin-left: 0;
+      }
+      .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .news-img {
+        width: 100%;
+        height: 120px;
+      }
+      .aux-sidebar {
+        flex-direction: column;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar">
+    本周新增 128 部高清视频 · 11 月 25 日热门榜单已更新
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <div class="logo-icon">色</div>
+        <span class="logo-text">色91</span>
+      </div>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="/#pick">精选推荐</a>
+        <a href="/#update">最新更新</a>
+        <a href="/#category">分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+      </nav>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="搜索视频名称…" aria-label="搜索视频名称">
+        <button type="button" id="searchBtn">搜索</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="portal-grid">
+      <!-- 左频道索引 -->
+      <aside class="channel-sidebar">
+        <h2>频道索引</h2>
+        <nav class="channel-list" aria-label="频道索引">
+          <a href="/#pick">精选推荐</a>
+          <a href="/#update">最新更新</a>
+          <a href="/#category">分类入口</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">用户评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#related">相关推荐</a>
+          <a href="/#rank">热门榜单</a>
+        </nav>
+      </aside>
+
+      <!-- 主内容区 -->
+      <main class="main-content">
+        <!-- 首屏主题区 -->
+        <section class="hero-section" id="hero">
+          <div class="hero-content">
+            <h1>色91</h1>
+            <p class="hero-subtitle">高清成人视频资源平台，每日更新精选内容，涵盖多元分类与社区互动。</p>
+            <div class="hero-actions">
+              <a href="/#pick" class="btn-primary">浏览精选</a>
+              <a href="/#update" class="btn-outline">最新更新</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <svg viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="30" width="220" height="140" rx="16" fill="#b22234" opacity="0.12"/>
+              <rect x="40" y="50" width="180" height="100" rx="8" fill="#b22234" opacity="0.25"/>
+              <circle cx="130" cy="100" r="24" fill="#b22234" opacity="0.6"/>
+              <polygon points="124,90 124,110 142,100" fill="white"/>
+              <rect x="60" y="160" width="140" height="8" rx="4" fill="#b22234" opacity="0.2"/>
+            </svg>
+          </div>
+        </section>
+
+        <!-- 主题领域概览 -->
+        <section class="section" id="overview">
+          <div class="section-header">
+            <h2>领域概览</h2>
+          </div>
+          <div class="overview-text">
+            <p><strong>色91</strong> 作为一个成人视频内容平台，涵盖多种视频类型与主题方向。当前平台内容以剧情向、素人自拍、专业制作、特定癖好等大类为主，每周更新约 100 部以上新条目。用户常搜索的类型包括“情侣实拍”“角色扮演”“户外场景”等，同时平台提供标签筛选与热度排序功能，方便快速定位感兴趣的内容。2026 年 11 月，平台新增了 VR 专区与 4K 修复老片专区，进一步丰富高清视频资源。社区讨论集中在拍摄手法、演员表现和剧情设定上，评论区常见对具体条目的细节评价。</p>
+          </div>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="section" id="pick">
+          <div class="section-header">
+            <h2>精选内容推荐</h2>
+            <a href="/#pick" class="more-link">查看全部 →</a>
+          </div>
+          <div class="card-grid" id="pickGrid">
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick01/400/300" alt="情侣实拍日常精选封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">情侣实拍日常精选</h3>
+                <div class="card-tags"><span class="tag">情侣</span><span class="tag">素人</span><span class="tag">日常</span></div>
+                <p class="card-desc">真实情侣居家生活记录，自然互动与亲密场景，适合喜欢真实感的观众。</p>
+                <div class="card-meta"><span>❤ 2.3w</span><span>11-25 更新</span></div>
+              </div>
+            </article>
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick02/400/300" alt="职场角色扮演剧情封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">职场角色扮演剧情</h3>
+                <div class="card-tags"><span class="tag">剧情</span><span class="tag">角色扮演</span><span class="tag">职场</span></div>
+                <p class="card-desc">办公室场景下的角色扮演短剧，情节完整，服装与布景用心。</p>
+                <div class="card-meta"><span>❤ 1.8w</span><span>11-24 更新</span></div>
+              </div>
+            </article>
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick03/400/300" alt="户外露营场景视频封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">户外露营场景</h3>
+                <div class="card-tags"><span class="tag">户外</span><span class="tag">露营</span><span class="tag">自然</span></div>
+                <p class="card-desc">山林露营背景下的亲密拍摄，自然环境音与光线处理出色。</p>
+                <div class="card-meta"><span>❤ 1.5w</span><span>11-23 更新</span></div>
+              </div>
+            </article>
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick04/400/300" alt="4K修复经典老片封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">4K修复经典老片</h3>
+                <div class="card-tags"><span class="tag">经典</span><span class="tag">4K修复</span><span class="tag">怀旧</span></div>
+                <p class="card-desc">2000年代经典作品高清修复版，画质提升明显，保留原汁韵味。</p>
+                <div class="card-meta"><span>❤ 1.2w</span><span>11-22 更新</span></div>
+              </div>
+            </article>
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick05/400/300" alt="VR沉浸式体验专区封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">VR沉浸式体验专区</h3>
+                <div class="card-tags"><span class="tag">VR</span><span class="tag">沉浸式</span><span class="tag">第一视角</span></div>
+                <p class="card-desc">180°与360°全景拍摄，配合头显设备获得第一人称沉浸感。</p>
+                <div class="card-meta"><span>❤ 0.9w</span><span>11-21 更新</span></div>
+              </div>
+            </article>
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick06/400/300" alt="深夜访谈剧情封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">深夜访谈剧情</h3>
+                <div class="card-tags"><span class="tag">剧情</span><span class="tag">访谈</span><span class="tag">深夜</span></div>
+                <p class="card-desc">以访谈节目为框架的剧情作品，台词自然，节奏舒缓。</p>
+                <div class="card-meta"><span>❤ 0.7w</span><span>11-20 更新</span></div>
+              </div>
+            </article>
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick07/400/300" alt="运动健身主题视频封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">运动健身主题</h3>
+                <div class="card-tags"><span class="tag">运动</span><span class="tag">健身</span><span class="tag">活力</span></div>
+                <p class="card-desc">健身房与瑜伽场景下的拍摄，动作设计有力量感。</p>
+                <div class="card-meta"><span>❤ 0.6w</span><span>11-19 更新</span></div>
+              </div>
+            </article>
+            <article class="video-card">
+              <img class="card-img" src="https://picsum.photos/seed/se91-pick08/400/300" alt="复古胶片风格短片封面" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">复古胶片风格短片</h3>
+                <div class="card-tags"><span class="tag">复古</span><span class="tag">胶片</span><span class="tag">艺术</span></div>
+                <p class="card-desc">采用胶片滤镜与手持拍摄，画面质感独特，情绪氛围浓厚。</p>
+                <div class="card-meta"><span>❤ 0.5w</span><span>11-18 更新</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="section" id="update">
+          <div class="section-header">
+            <h2>最新更新</h2>
+            <a href="/#update" class="more-link">更多动态 →</a>
+          </div>
+          <div class="update-list">
+            <div class="update-item">
+              <span class="update-title">情侣实拍日常精选 · 第 12 集</span>
+              <span class="update-desc">新场景阳台早餐互动</span>
+              <span class="update-time">今天 09:30</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">职场角色扮演剧情 · 第 8 集</span>
+              <span class="update-desc">办公室加班情节上线</span>
+              <span class="update-time">今天 08:15</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">户外露营场景 · 第 5 集</span>
+              <span class="update-desc">溪边露营夜拍更新</span>
+              <span class="update-time">昨天 21:10</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">4K修复经典老片 · 新增 3 部</span>
+              <span class="update-desc">《午夜列车》《夏日回忆》《旧金山》</span>
+              <span class="update-time">昨天 18:40</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">VR沉浸式体验专区 · 新片</span>
+              <span class="update-desc">360° 全景温泉场景</span>
+              <span class="update-time">11-23 14:20</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">深夜访谈剧情 · 第 3 集</span>
+              <span class="update-desc">嘉宾对谈第二夜</span>
+              <span class="update-time">11-22 22:00</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">运动健身主题 · 第 7 集</span>
+              <span class="update-desc">力量训练+拉伸环节</span>
+              <span class="update-time">11-21 10:05</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">复古胶片风格短片 · 第 2 集</span>
+              <span class="update-desc">老式理发店场景</span>
+              <span class="update-time">11-20 16:30</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">热门榜单 · 11 月第 4 周</span>
+              <span class="update-desc">周榜前 10 名已刷新</span>
+              <span class="update-time">11-25 07:00</span>
+            </div>
+            <div class="update-item">
+              <span class="update-title">社区讨论 · 本周话题</span>
+              <span class="update-desc">“你更喜欢剧情向还是素人向？”</span>
+              <span class="update-time">11-24 12:00</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="section" id="category">
+          <div class="section-header">
+            <h2>分类入口</h2>
+          </div>
+          <div class="category-grid">
+            <div class="category-item">剧情向</div>
+            <div class="category-item">素人自拍</div>
+            <div class="category-item">角色扮演</div>
+            <div class="category-item">户外场景</div>
+            <div class="category-item">VR沉浸</div>
+            <div class="category-item">4K修复</div>
+            <div class="category-item">情侣日常</div>
+            <div class="category-item">运动健身</div>
+          </div>
+        </section>
+
+        <!-- 深度解析正文 -->
+        <section class="section" id="deep">
+          <div class="section-header">
+            <h2>深度解析</h2>
+          </div>
+          <div class="deep-dive">
+            <h3>剧情向与素人向的核心差异</h3>
+            <p>在色91平台上，剧情向作品通常有完整剧本、场景布置和角色设定，演员按照脚本推进情节，单集时长多在 15-30 分钟。素人自拍则强调真实感，拍摄设备多为手机或家用相机，场景以居家为主，互动自然但画质和收音水平参差不齐。选择时如果看重故事性和制作水准，优先看剧情向；如果追求代入感和日常氛围，素人向更合适。</p>
+            <h3>如何判断一部作品是否值得投入时间</h3>
+            <p>可以从三个维度快速评估：</p>
+            <ul>
+              <li><strong>热度与评分</strong>：色91的卡片上会显示爱心数和更新日期，通常爱心数超过 1 万、近期更新的作品质量较稳定。</li>
+              <li><strong>标签匹配度</strong>：确认作品标签是否精准对应你的偏好，例如“角色扮演”类是否包含你感兴趣的特定职业设定。</li>
+              <li><strong>系列连续性</strong>：多集作品优先看最新一集，如果开头 3 分钟能吸引你，再回看前作。</li>
+            </ul>
+            <h3>VR 专区与普通视频的体验区别</h3>
+            <p>VR 沉浸式体验专区采用 180°或 360°全景拍摄，需要配合 VR 头显或手机盒子观看，视角可以跟随头部转动，临场感强。但 VR 视频对带宽和播放设备要求更高，部分作品在普通屏幕上观看会出现画面畸变。建议初次尝试时选择标注“平面兼容”的作品，先用手机体验再决定是否投入头显设备。</p>
+            <h3>4K 修复老片的观看建议</h3>
+            <p>4K 修复专区收录了 2000 年代前后的经典作品，修复过程中对噪点、色彩和细节进行了增强。观看时建议使用支持 HDR 的显示设备，否则可能感觉画面过于锐利。如果偏好怀旧氛围，可以对比修复前后的截图，部分作品保留了原始胶片的颗粒感，这是修复团队刻意保留的。</p>
+            <h3>分类筛选与榜单的使用策略</h3>
+            <p>色91的分类入口提供 8 个主要类别，右侧热门榜单每日 7 点更新。日常浏览时，可以先看榜单前 10 名了解近期热门，再通过分类筛选找到细分类型。如果时间有限，直接查看“精选内容推荐”卡片上的更新日期和爱心数，优先选择 3 天内更新且爱心数高于 1 万的作品。</p>
+          </div>
+        </section>
+
+        <!-- 体验指南 / 消费路径 -->
+        <section class="section" id="guide">
+          <div class="section-header">
+            <h2>体验指南</h2>
+          </div>
+          <div class="overview-text">
+            <p><strong>第一次接触色91</strong>，建议先从“精选内容推荐”中的高热度作品开始，这些作品经过较多用户验证，踩雷概率低。如果你有明确的类型偏好，直接使用分类入口筛选，比如只对“角色扮演”感兴趣，就点击对应分类，再按更新日期排序。观看前留意卡片上的标签和简介，简介通常概括了场景和情节，能帮你判断是否符合口味。对于系列作品，建议从最新一集开始试看，如果喜欢再回看前集，避免在旧作上消耗过多时间。社区评论区的用户反馈也值得参考，评论中会提到具体场景是否真实、拍摄角度如何，这些是标签无法传达的信息。最后，VR 和 4K 修复专区属于进阶体验，建议在熟悉普通视频后再尝试。</p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+          <div class="section-header">
+            <h2>常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>色91上的剧情向作品一般多久更新一次？</summary>
+              <p>大多数剧情向系列每周更新 1-2 集，部分热门系列会保持每周双更。更新日期在卡片和更新列表中都会标注，建议关注“最新更新”板块获取实时动态。</p>
+            </details>
+            <details class="faq-item">
+              <summary>素人自拍和剧情向的主要区别是什么？</summary>
+              <p>素人自拍以真实生活场景为主，拍摄设备简单，互动自然但制作水准不稳定；剧情向有完整脚本和场景设计，制作更精细，单集时长更长。两者适合不同的观看偏好。</p>
+            </details>
+            <details class="faq-item">
+              <summary>第一次看VR内容需要什么设备？</summary>
+              <p>色91的VR专区支持手机加VR盒子、一体式VR头显以及部分PC VR设备。建议先选择标注“平面兼容”的作品，用手机直接播放体验，再决定是否购买头显。</p>
+            </details>
+            <details class="faq-item">
+              <summary>4K修复老片和普通版本有什么区别？</summary>
+              <p>4K修复版对画面进行了降噪、色彩校正和分辨率提升，细节更清晰，但部分作品会保留原始胶片的颗粒感。观看时建议使用支持HDR的屏幕效果更好。</p>
+            </details>
+            <details class="faq-item">
+              <summary>如何判断一部作品的热度是否真实？</summary>
+              <p>可以结合爱心数、评论数量和更新时间综合判断。通常爱心数超过1万且评论中有具体场景讨论的作品，热度比较可靠。如果爱心数很高但评论寥寥，可能需要谨慎。</p>
+            </details>
+            <details class="faq-item">
+              <summary>色91的分类入口里哪个类型适合新手？</summary>
+              <p>建议从“情侣日常”或“精选推荐”开始，这些类型内容门槛低、氛围轻松。如果对特定场景感兴趣，再尝试“角色扮演”或“户外场景”。</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="section" id="comments">
+          <div class="section-header">
+            <h2>用户评论</h2>
+          </div>
+          <div class="comment-list">
+            <div class="comment-item">
+              <div class="comment-avatar">林</div>
+              <div class="comment-body">
+                <div class="comment-author">林子里的风</div>
+                <div class="comment-text">情侣实拍第12集阳台那段光线特别好，收音也比前几集清楚。</div>
+                <div class="comment-date">今天 10:02</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">陈</div>
+              <div class="comment-body">
+                <div class="comment-author">陈默是金</div>
+                <div class="comment-text">职场角色扮演第8集剧情有点拖，但办公室布景很真实。</div>
+                <div class="comment-date">今天 09:15</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">A</div>
+              <div class="comment-body">
+                <div class="comment-author">阿May</div>
+                <div class="comment-text">VR温泉那部用手机盒子看的，沉浸感确实强，就是有点晕。</div>
+                <div class="comment-date">昨天 22:30</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">大</div>
+              <div class="comment-body">
+                <div class="comment-author">大熊要睡觉</div>
+                <div class="comment-text">4K修复的《午夜列车》画质提升明显，但胶片颗粒保留得刚刚好。</div>
+                <div class="comment-date">昨天 19:45</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">K</div>
+              <div class="comment-body">
+                <div class="comment-author">Kiko_99</div>
+                <div class="comment-text">户外露营第5集溪边夜拍氛围很好，就是蚊子声有点出戏哈哈。</div>
+                <div class="comment-date">11-24 21:12</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">王</div>
+              <div class="comment-body">
+                <div class="comment-author">王不二</div>
+                <div class="comment-text">深夜访谈第3集嘉宾对话很自然，推荐喜欢慢节奏的看看。</div>
+                <div class="comment-date">11-24 14:20</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">赵</div>
+              <div class="comment-body">
+                <div class="comment-author">赵小刀</div>
+                <div class="comment-text">运动健身第7集动作设计比想象中专业，拉伸环节很实用。</div>
+                <div class="comment-date">11-23 18:05</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">M</div>
+              <div class="comment-body">
+                <div class="comment-author">Mia_zz</div>
+                <div class="comment-text">复古胶片那部老理发店场景色调绝了，像在看老电影。</div>
+                <div class="comment-date">11-23 11:30</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">刘</div>
+              <div class="comment-body">
+                <div class="comment-author">刘大拿</div>
+                <div class="comment-text">分类入口挺清楚的，找角色扮演直接点进去就行，不用翻半天。</div>
+                <div class="comment-date">11-22 20:15</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">孙</div>
+              <div class="comment-body">
+                <div class="comment-author">孙悟饭</div>
+                <div class="comment-text">热门榜单更新挺及时，每周看看前10就知道最近什么火。</div>
+                <div class="comment-date">11-22 16:40</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">周</div>
+              <div class="comment-body">
+                <div class="comment-author">周周不是粥</div>
+                <div class="comment-text">剧情向有些系列更新太慢了，等一集要一周，希望加快。</div>
+                <div class="comment-date">11-21 09:50</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">李</div>
+              <div class="comment-body">
+                <div class="comment-author">李逍遥客</div>
+                <div class="comment-text">素人自拍的收音普遍不行，建议平台加个收音质量标签。</div>
+                <div class="comment-date">11-21 08:20</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">吴</div>
+              <div class="comment-body">
+                <div class="comment-author">吴所谓</div>
+                <div class="comment-text">4K修复区多来点老片吧，2000年前后的都可以。</div>
+                <div class="comment-date">11-20 19:30</div>
+              </div>
+            </div>
+            <div class="comment-item">
+              <div class="comment-avatar">郑</div>
+              <div class="comment-body">
+                <div class="comment-author">郑在开心</div>
+                <div class="comment-text">VR区作品还不多，但质量比预想的好，期待更多场景。</div>
+                <div class="comment-date">11-20 14:10</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="section" id="news">
+          <div class="section-header">
+            <h2>相关资讯</h2>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <img class="news-img" src="https://picsum.photos/seed/se91-news01/600/400" alt="VR专区新增温泉场景资讯配图" width="600" height="400" loading="lazy">
+              <div class="news-content">
+                <div class="news-title">VR沉浸式专区上线360°温泉场景</div>
+                <div class="news-date">2026-11-25</div>
+                <div class="news-summary">新增全景温泉拍摄作品，支持手机与头显观看，首日播放量突破5万。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-img" src="https://picsum.photos/seed/se91-news02/600/400" alt="4K修复老片合集资讯配图" width="600" height="400" loading="lazy">
+              <div class="news-content">
+                <div class="news-title">4K修复专区新增三部经典作品</div>
+                <div class="news-date">2026-11-24</div>
+                <div class="news-summary">《午夜列车》《夏日回忆》《旧金山》修复版上线，保留原始胶片质感。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-img" src="https://picsum.photos/seed/se91-news03/600/400" alt="色91周榜更新资讯配图" width="600" height="400" loading="lazy">
+              <div class="news-content">
+                <div class="news-title">11月第4周热门榜单刷新</div>
+                <div class="news-date">2026-11-25</div>
+                <div class="news-summary">情侣实拍日常精选重回榜首，职场角色扮演上升至第三位。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-img" src="https://picsum.photos/seed/se91-news04/600/400" alt="社区讨论话题资讯配图" width="600" height="400" loading="lazy">
+              <div class="news-content">
+                <div class="news-title">社区讨论：剧情向与素人向你选哪个？</div>
+                <div class="news-date">2026-11-24</div>
+                <div class="news-summary">本周话题引发300+条评论，多数用户表示两者交替观看。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-img" src="https://picsum.photos/seed/se91-news05/600/400" alt="户外露营系列新集资讯配图" width="600" height="400" loading="lazy">
+              <div class="news-content">
+                <div class="news-title">户外露营场景系列更新至第5集</div>
+                <div class="news-date">2026-11-24</div>
+                <div class="news-summary">溪边夜拍场景上线，自然音收录完整，用户评价氛围感强。</div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img class="news-img" src="https://picsum.photos/seed/se91-news06/600/400" alt="运动健身系列更新资讯配图" width="600" height="400" loading="lazy">
+              <div class="news-content">
+                <div class="news-title">运动健身主题系列推出力量训练特辑</div>
+                <div class="news-date">2026-11-21</div>
+                <div class="news-summary">第7集加入拉伸与力量训练环节，动作设计参考专业健身课程。</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关推荐 -->
+        <section class="section" id="related">
+          <div class="section-header">
+            <h2>相关推荐</h2>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#category">情侣日常系列</a>
+            <a href="/#category">办公室角色扮演</a>
+            <a href="/#category">户外露营夜拍</a>
+            <a href="/#category">VR全景体验</a>
+            <a href="/#category">4K修复老片</a>
+            <a href="/#category">深夜访谈剧情</a>
+            <a href="/#category">运动健身特辑</a>
+            <a href="/#category">复古胶片短片</a>
+          </div>
+        </section>
+      </main>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="aux-sidebar">
+        <div class="aux-card">
+          <h3>热门榜单</h3>
+          <div class="rank-list">
+            <div class="rank-item">
+              <span class="rank-num">1</span>
+              <span class="rank-title">情侣实拍日常精选</span>
+              <span class="rank-meta">2.3w</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">2</span>
+              <span class="rank-title">职场角色扮演剧情</span>
+              <span class="rank-meta">1.8w</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">3</span>
+              <span class="rank-title">户外露营场景</span>
+              <span class="rank-meta">1.5w</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">4</span>
+              <span class="rank-title">4K修复经典老片</span>
+              <span class="rank-meta">1.2w</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">5</span>
+              <span class="rank-title">VR沉浸式体验专区</span>
+              <span class="rank-meta">0.9w</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">6</span>
+              <span class="rank-title">深夜访谈剧情</span>
+              <span class="rank-meta">0.7w</span>
+            </div>
+            <div class="rank-item">
+              <span class="rank-num">7</span>
+              <span class="rank-title">运动健身主题</span>
+              <span class="rank-meta">0.6w</span>
+            </div>
+          </div>
+        </div>
+        <div class="aux-card">
+          <h3>条目时间线</h3>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <span class="timeline-date">11-25</span>
+              <span class="timeline-text">情侣实拍第12集上线</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">11-24</span>
+              <span class="timeline-text">4K修复新增3部老片</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">11-23</span>
+              <span class="timeline-text">VR温泉全景作品发布</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">11-22</span>
+              <span class="timeline-text">深夜访谈第3集上线</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">11-21</span>
+              <span class="timeline-text">运动健身特辑更新</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">色91</div>
+        <p class="footer-desc">高清成人视频资源平台，每日更新精选内容，涵盖多元分类与社区互动。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="/#pick">精选推荐</a></li>
+          <li><a href="/#update">最新更新</a></li>
+          <li><a href="/#category">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区</h4>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="/#hero">品牌介绍</a></li>
+          <li><a href="/#rank">热门榜单</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 色91 · 本平台内容仅供成年人浏览</span>
+      <span>所有视频均为演示示例，不构成真实内容推荐</span>
+    </div>
+  </footer>
+
+  <script>
+    // 本地搜索过滤（仅筛选精选卡片和更新条目）
+    (function() {
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const pickGrid = document.getElementById('pickGrid');
+      const updateList = document.querySelector('.update-list');
+
+      function doSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        if (!query) {
+          // 重置显示
+          document.querySelectorAll('.video-card').forEach(card => card.style.display = '');
+          document.querySelectorAll('.update-item').forEach(item => item.style.display = '');
+          return;
+        }
+
+        // 过滤卡片
+        document.querySelectorAll('.video-card').forEach(card => {
+          const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+          const desc = card.querySelector('.card-desc')?.textContent.toLowerCase() || '';
+          const tags = Array.from(card.querySelectorAll('.tag')).map(t => t.textContent.toLowerCase()).join(' ');
+          const combined = title + ' ' + desc + ' ' + tags;
+          card.style.display = combined.includes(query) ? '' : 'none';
+        });
+
+        // 过滤更新条目
+        document.querySelectorAll('.update-item').forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? '' : 'none';
+        });
+
+        // 无结果反馈
+        const visibleCards = Array.from(document.querySelectorAll('.video-card')).filter(c => c.style.display !== 'none');
+        if (visibleCards.length === 0) {
+          // 显示无结果提示（简单处理：在pickGrid内插入提示）
+          const existingMsg = document.getElementById('noResultMsg');
+          if (!existingMsg) {
+            const msg = document.createElement('p');
+            msg.id = 'noResultMsg';
+            msg.style.cssText = 'grid-column:1/-1; text-align:center; padding:2rem; color:#999;';
+            msg.textContent = '没有找到匹配的视频，请尝试其他关键词。';
+            pickGrid.appendChild(msg);
+          }
+        } else {
+          const existingMsg = document.getElementById('noResultMsg');
+          if (existingMsg) existingMsg.remove();
+        }
+      }
+
+      searchBtn.addEventListener('click', doSearch);
+      searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+          doSearch();
+        }
+      });
+    })();
+  </script>
+</body>
+  </html>
